@@ -43,9 +43,6 @@ final filteredMealsProvider = Provider((ref) {
     if (activeFilters[Filter.lactoseFree]! && !meal.isLactoseFree) {
       return false;
     }
-
-
-    
     if (activeFilters[Filter.vegan]! && !meal.isVegan) {
       return false;
     }
