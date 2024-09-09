@@ -58,11 +58,14 @@ class MealScreen extends ConsumerWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image(
-              image: NetworkImage(meal.imageUrl),
-              height: 240,
-              width: double.infinity,
-              fit: BoxFit.cover,
+            Hero(
+              tag: meal.id,
+              child: Image(
+                image: NetworkImage(meal.imageUrl),
+                height: 240,
+                width: double.infinity,
+                fit: BoxFit.cover,
+              ),
             ),
             const SizedBox(height: 20),
             Text(
